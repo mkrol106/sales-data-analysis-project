@@ -7,13 +7,13 @@ This is the practice data analysis project, aiming to gather insights and inform
 
 ## Technologies
 The project was created with technologies, languages, platforms and libraries below:
-- Python version 
-  - pandas version
-  - numpy version
-  - matplotlib version
-  - seaborn version
-  - scipy version
-- Jupyter Notebook version 
+- Python version 3.8.3
+  - pandas version 1.4.2
+  - numpy version 1.22.3
+  - matplotlib version 3.5.1
+  - seaborn version 0.11.2
+  - scipy version 1.8.0
+- Jupyter Notebook version 6.4.11
 
 <br><br>
 

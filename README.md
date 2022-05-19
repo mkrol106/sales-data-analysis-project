@@ -24,3 +24,35 @@ This dataset is split into 12 .csv files for each month of the year 2019. Many o
 - Order Date - This is the date the customer is requesting the order be shipped.
 - Purchase Address - The purchase order is prepared by the buyer, often through a purchasing department. The purchase order, or PO, usually includes a PO number, which is useful in matching shipments with purchases; a shipping date; billing address; shipping address; and the request items, quantities and price.
 
+## Data processing
+The whole process of cleaning and wrangling the source data was described and visualized in the notebook 01_data_processing. Sections below offer a brief synopsis of the applied changes.
+
+### Data cleaning
+At first, the data from many csv files was imported into a single pandas data frame for convenience. After the brief assessment, the following changes were applied:
+- missing and duplicated rows were removed,
+- rows with invalid data, such as rows with column names in value fields, were removed.
+
+### Data wrangling
+After the initial cleaning, the data frame of valid data was transformed into the desired formatting:
+- "Order ID", "Quantity Ordered" and "Price Each" columns were converted to the correct numerical data types,
+- "Order Date" column was converted to the correct datetime data type,
+- new columns were added based on the existing columns for the later ease of working with the data:
+  - from "Order Date", the "Order Month" and "Order Time" columns were extracted,
+  - column "Purchase Address" was split into additional, more detailed information, such as state and city,
+  - a new calculated column "Total Price" was created based on each product's unit price and ordered quantity,
+- transformed data was split into two tables (data frames):
+  - order_items data frame, for detailed information about each product in each order,
+  - orders data frame, for detailed information about each order from the shipping perspective (no information about ordered products).
+
+After transformation, the two resulting data frames were exported to csv files in a directory 'clean_data'.
+
+## Data analysis
+
+
+
+
+
+
+
+
+

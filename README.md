@@ -3,6 +3,8 @@
 ## Project description
 This is the practice data analysis project, aiming to gather insights and information from the messy and unprocessed sales data. Main tool for this project was python's pandas library, combined with several libraries for statistical computation and plotting. The whole code is accessible through the Jupyter Notebook platform.
 
+<br><br>
+
 ## Technologies
 The project was created with technologies, languages, platforms and libraries below:
 - Python version 
@@ -12,6 +14,8 @@ The project was created with technologies, languages, platforms and libraries be
   - seaborn version
   - scipy version
 - Jupyter Notebook version 
+
+<br><br>
 
 ## Source of the data
 The data for this project comes from Sales Product Dataset, hosted on kaggle under the url
@@ -23,6 +27,8 @@ This dataset is split into 12 .csv files for each month of the year 2019. Many o
 - Price Each - The price of each products.
 - Order Date - This is the date the customer is requesting the order be shipped.
 - Purchase Address - The purchase order is prepared by the buyer, often through a purchasing department. The purchase order, or PO, usually includes a PO number, which is useful in matching shipments with purchases; a shipping date; billing address; shipping address; and the request items, quantities and price.
+
+<br><br>
 
 ## Data processing
 The whole process of cleaning and wrangling the source data was described and visualized in the notebook 01_data_processing. Sections below offer a brief synopsis of the applied changes.
@@ -46,7 +52,31 @@ After the initial cleaning, the data frame of valid data was transformed into th
 
 After transformation, the two resulting data frames were exported to csv files in a directory 'clean_data'.
 
+<br><br>
+
 ## Data analysis
+Next, the processed data was analyzed and visualized in the notebook 02_data_analysis.
+
+### Data exploration
+To get a better grasp on what the dataset contains, some basic information was shown:
+- the date range of the data, which shown that the data spans the whole year of 2019,
+- hourly distribution of order placement, showing peaks at 12:00 and 19:00,
+- number of different product offered, which was 19,
+- most popular products and how many of them were sold,
+- total sales for the year, reaching almost 34.5 mln dollars.
+
+### Data analysis insights
+After the preliminary exploration, the deeper analysis was performed to answer the set of questions:
+- What were the total monthly sales and which month turned out the best?
+  - The distribution turned out to be considerably variant, reaching highest peak in December (4.608 mln dollars).
+- What time is best suited for advertisement?
+  - The time distribution of number of orders show two main peaks at 12:00 and 19:30 in order placement, so half an hour before those peaks should be an effective time for advertising.
+- Which city had the largest number of sales in total?
+  - A single city, San Francisco, was far ahead of any other in terms of sales. It reached 8.225 mln dollars in sales, representing 24 % of total sales.
+- Which product sold the most and why?
+  - The best product in terms of items sold was a AAA battery pack, which was also one of the cheapest ones overall. However, more in depth analysis shown that even though in general the cheaper products sold much more frequently than the more expensive ones, the more costly items were responsible for much larger share of total sales.
+-Which products were most often paired together?
+  - Two most popular combinations were: iPhone with Lightning charging cable, and Google Phone with USB-C cable.
 
 
 
